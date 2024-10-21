@@ -1,17 +1,19 @@
 import { useState, useEffect } from "react"
 import { signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth"
 import { auth } from "../firebaseConfig"
-export function SignIn() {
-  return <button onClick={() => signInWithPopup(auth, new GoogleAuthProvider())}>Sign In</button>
+
+export function login() {
+  return signInWithPopup(auth, new GoogleAuthProvider())
 }
-export function SignOut() {
-  return (
-    <div>
-      Hello, {auth.currentUser.displayName} &nbsp;
-      <button onClick={() => signOut(auth)}>Sign Out</button>
-    </div>
-  )
+
+export function logout() {
+  return signOut(auth)
 }
+
+export function loggedInUserDisplayName() {
+  return auth.currentUser.displayName
+}
+
 export function useAuthentication() {
   const [user, setUser] = useState(null)
   useEffect(() => {

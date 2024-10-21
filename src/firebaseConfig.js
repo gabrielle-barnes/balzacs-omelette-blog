@@ -1,15 +1,17 @@
 import { initializeApp } from "firebase/app"
 import { getAuth } from "firebase/auth"
 import { getFirestore } from "firebase/firestore"
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyD-NRvLO_ReZWwxwS3ovkXhlhoi-KsXNxo",
-  authDomain: "simple-blog-dda70.firebaseapp.com",
-  projectId: "simple-blog-dda70",
-  storageBucket: "simple-blog-dda70.appspot.com",
-  messagingSenderId: "841806740048",
-  appId: "1:841806740048:web:e73f868b2c77e4e7a76f55",
+  apiKey: "AIzaSyC-UcaJHE16kwGeJhq7-p3LE5xFBk6pKtA",
+  authDomain: "some-blog-95292.firebaseapp.com",
+  projectId: "some-blog-95292",
+  storageBucket: "some-blog-95292.appspot.com",
+  messagingSenderId: "404049307848",
+  appId: "1:404049307848:web:4d06ad10a732e549ef1dfd",
 }
+
 export const app = initializeApp(firebaseConfig)
 export const auth = getAuth(app)
 export const db = getFirestore(app)

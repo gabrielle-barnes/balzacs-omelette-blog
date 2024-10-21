@@ -1,3 +1,3 @@
 # A Blog 
 
-My homework 3 for CMSI 2120
+Simple blog for Homework 3 (CMSI 2120)

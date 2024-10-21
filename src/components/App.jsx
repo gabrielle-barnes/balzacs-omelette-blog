@@ -2,14 +2,17 @@ import { useEffect, useState } from "react"
 import Nav from "./Nav"
 import Article from "./Article"
 import ArticleEntry from "./ArticleEntry"
-import { SignIn, SignOut, useAuthentication } from "../services/authService.jsx"
-import { fetchArticles, createArticle } from "../services/articleService.jsx"
+import { SignIn, SignOut } from "./Auth"
+import { useAuthentication } from "../services/authService"
+import { fetchArticles, createArticle } from "../services/articleService"
 import "./App.css"
+
 export default function App() {
   const [articles, setArticles] = useState([])
   const [article, setArticle] = useState(null)
   const [writing, setWriting] = useState(false)
   const user = useAuthentication()
+
   // This is a trivial app, so just fetch all the articles only when
   // a user logs in. A real app would do pagination. Note that
   // "fetchArticles" is what gets the articles from the service and
@@ -19,6 +22,7 @@ export default function App() {
       fetchArticles().then(setArticles)
     }
   }, [user])
+
   // Update the "database" *then* update the internal React state. These
   // two steps are definitely necessary.
   function addArticle({ title, body }) {
@@ -28,6 +32,7 @@ export default function App() {
       setWriting(false)
     })
   }
+
   return (
     <div className="App">
       <header>
@@ -35,7 +40,9 @@ export default function App() {
         {user && <button onClick={() => setWriting(true)}>New Article</button>}
         {!user ? <SignIn /> : <SignOut />}
       </header>
+
       {!user ? "" : <Nav articles={articles} setArticle={setArticle} />}
+
       {!user ? (
         ""
       ) : writing ? (
