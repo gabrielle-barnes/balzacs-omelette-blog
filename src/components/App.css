@@ -14,8 +14,9 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  background-color: black;
+  background-color: rgba(220, 194, 92, 0.87);
   color: white;
+  text-shadow: 2px 2px 2px #0b0b0b;
   grid-column: 1 / span 2;
   padding: 10px 5px;
 }
