@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background-color: snow;
 }
 
 .App {
@@ -11,11 +12,18 @@ body {
   overflow: scroll;
 }
 
+header, form {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: large;
+}
+
 header {
   display: flex;
   justify-content: space-between;
-  background-color: rgba(220, 194, 92, 0.87);
-  color: white;
+  background-color: rgba(233, 214, 138, 0.87);
+  color: whitesmoke;
   text-shadow: 2px 2px 2px #0b0b0b;
   grid-column: 1 / span 2;
   padding: 10px 5px;
@@ -38,10 +46,16 @@ nav,
 article {
   height: 100%;
   padding: 10px;
+  color:rgb(18, 29, 29);
+  font-family: "Quintessential", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: large;
 }
 
 nav {
-  background-color: #dee9ff;
+  background-image: url('../../docs/images/cozy.jpg');
+  border: 3px dashed rgb(241, 231, 212);
 }
 
 nav p:hover {
@@ -55,6 +69,15 @@ article .date {
 
 article .body {
   white-space: break-spaces;
+}
+
+button {
+  font-size: 15px;
+  padding: 2px;
+  margin: 2px;
+  color: rgb(240, 169, 180);
+  background-color: rgba(179, 242, 214, 0.274);
+  box-shadow: 2px 2px grey;
 }
 
 .error {
