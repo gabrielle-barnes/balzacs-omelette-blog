@@ -1,3 +1,4 @@
+// Displays the selected article or a message if none is selected.
 export default function Article({ article }) {
   return (
     <article>

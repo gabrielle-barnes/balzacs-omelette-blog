@@ -1,3 +1,4 @@
+// Provides login, logout, user display name, and authentication state handling.
 import { useState, useEffect } from "react"
 import { signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth"
 import { auth } from "../firebaseConfig"

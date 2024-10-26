@@ -1,7 +1,4 @@
-// This service completely hides the data store from the rest of the app.
-// No other part of the app knows how the data is stored. If anyone wants
-// to read or write data, they have to go through this service.
-
+// Centralized service for all data access, hiding storage details from the app.
 import { db } from "../firebaseConfig"
 import {
   collection,
@@ -14,13 +11,16 @@ import {
 } from "firebase/firestore"
 
 export async function createArticle({ title, body }) {
-  const data = { title, body, date: Timestamp.now() }
+  const date = new Date(Timestamp.now().toDate()).toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  })
+  const data = { title, body, date }
   const docRef = await addDoc(collection(db, "articles"), data)
   return { id: docRef.id, ...data }
 }
 
-// NOT FINISHED: This only gets the first 20 articles. In a real app,
-// you would implement pagination.
 export async function fetchArticles() {
   const snapshot = await getDocs(
     query(collection(db, "articles"), orderBy("date", "desc"), limit(20))
