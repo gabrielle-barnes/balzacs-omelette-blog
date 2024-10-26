@@ -75,7 +75,8 @@ button {
   font-size: 15px;
   padding: 2px;
   margin: 2px;
-  color: rgb(240, 169, 180);
+  color: rgb(28, 84, 54);
+  font-weight: 500;
   background-color: rgba(179, 242, 214, 0.274);
   box-shadow: 2px 2px grey;
 }
