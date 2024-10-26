@@ -11,3 +11,5 @@ This project allows users to create and view their blog posts with secure, real-
 ## Try it Out!
 
 Come on in and enjoy the app(etizer), **au revoir**!
+
+[Firebase hosting](https://console.firebase.google.com/project/some-blog-95292/overview)
