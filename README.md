@@ -4,10 +4,6 @@ _Created for web application development_
 
 Welcome to [Balzac's Omelette](https://some-blog-95292.web.app)—a simple blog application built using Firebase Firestore for data storage and Firebase Auth for user authentication.
 
-## Overview
-
-This project allows users to create and view their blog posts with secure, real-time storage. User authentication is handled by Firebase Auth and the app is hosted on Firebase.
-
 ## Try it Out!
 
 Come on in and enjoy the app(etizer), **au revoir**!
